@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% block title %} Pass list{% endblock %}
+
+{% block body %}
+<button type="button" name="button"><a href="/add">Add</a></button> <br>
+<table>
+<tr>
+
+  <th>Student ID</th>
+  <th>Student Name</th>
+  <th>Student Grade</th>
+  <th>Moves</th>
+</tr>
+  {% for student in students %}
+  {% if student.grade >= 60 %}
+<tr>
+  <td>{{student.id}}</td>
+  <td>{{student.name}}</td>
+  <td>{{student.grade}}</td>
+  <td>
+    <button type="button" name="delete"><a href="/delete">Remove</a></button>
+  </td>
+</tr>
+  {% endif %}
+  {% endfor %}
+</table>
+
+
+
+{% endblock %}

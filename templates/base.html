@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>{% block title %} Base {% endblock %}</title>
+    <style media="screen">
+      li{
+        text-align: center;
+      }
+      button {
+        margin-left: auto;
+        margin-right: auto;
+      }
+      table {
+        margin-left: auto;
+        margin-right: auto;
+      }
+    </style>
+  </head>
+  <body>
+    <ui>
+    <li><a href="/">Display</a></li>
+    <li><a href="/pass">Pass Students</a></li>
+    </ui>
+{% block body %}
+
+
+
+{% endblock %}
+  </body>
+</html>
